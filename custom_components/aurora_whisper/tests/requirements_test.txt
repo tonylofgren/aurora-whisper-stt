@@ -1,0 +1,5 @@
+# Test dependencies for the Home Assistant based tests.
+# test_audio.py needs none of these — it runs on the stdlib + pytest alone.
+homeassistant
+pytest-homeassistant-custom-component
+aioresponses

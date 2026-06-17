@@ -1,0 +1,13 @@
+{
+  "domain": "aurora_whisper",
+  "name": "Aurora Whisper",
+  "codeowners": ["@tonylofgren"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/tonylofgren/aurora-whisper-stt",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/tonylofgren/aurora-whisper-stt/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

@@ -1,0 +1,45 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Aurora Whisper",
+        "description": "Anslut till en OpenAI-kompatibel Whisper-transkriberingsendpoint.",
+        "data": {
+          "base_url": "Bas-URL",
+          "api_key": "API-nyckel",
+          "model": "Modell",
+          "language": "Standardspråk",
+          "timeout": "Timeout (sekunder)"
+        },
+        "data_description": {
+          "base_url": "Rot-URL för det OpenAI-kompatibla API:t; måste sluta med /v1.",
+          "api_key": "Bearer-token som skickas i Authorization-headern. Lämna tomt för servrar utan autentisering.",
+          "model": "Modellnamn, t.ex. kb-whisper-large eller whisper-1.",
+          "language": "ISO-639-1-kod som används när pipelinen inte begär ett specifikt språk, t.ex. sv.",
+          "timeout": "Hur länge en transkribering får ta innan den avbryts."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Kunde inte ansluta till API:t. Kontrollera bas-URL och nätverk.",
+      "invalid_auth": "API:t avvisade autentiseringen. Kontrollera API-nyckeln."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Inställningar för Aurora Whisper",
+        "data": {
+          "model": "Modell",
+          "language": "Standardspråk",
+          "prompt": "Prompt"
+        },
+        "data_description": {
+          "model": "Modellnamn, t.ex. kb-whisper-large eller whisper-1.",
+          "language": "ISO-639-1-kod som används när pipelinen inte begär ett specifikt språk.",
+          "prompt": "Valfri kontextledtråd som skickas till modellen för bättre träffsäkerhet."
+        }
+      }
+    }
+  }
+}

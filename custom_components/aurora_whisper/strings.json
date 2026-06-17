@@ -1,0 +1,45 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Aurora Whisper",
+        "description": "Connect to an OpenAI-compatible Whisper transcription endpoint.",
+        "data": {
+          "base_url": "Base URL",
+          "api_key": "API key",
+          "model": "Model",
+          "language": "Default language",
+          "timeout": "Timeout (seconds)"
+        },
+        "data_description": {
+          "base_url": "Root URL of the OpenAI-compatible API; it must end with /v1.",
+          "api_key": "Bearer token sent in the Authorization header. Leave empty for servers without authentication.",
+          "model": "Model name, e.g. kb-whisper-large or whisper-1.",
+          "language": "ISO-639-1 code used when the pipeline does not request a specific language, e.g. sv.",
+          "timeout": "How long to wait for a transcription before giving up."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not connect to the API. Check the base URL and your network.",
+      "invalid_auth": "The API rejected the credentials. Check the API key."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Aurora Whisper options",
+        "data": {
+          "model": "Model",
+          "language": "Default language",
+          "prompt": "Prompt"
+        },
+        "data_description": {
+          "model": "Model name, e.g. kb-whisper-large or whisper-1.",
+          "language": "ISO-639-1 code used when the pipeline does not request a specific language.",
+          "prompt": "Optional context hint passed to the model to improve accuracy."
+        }
+      }
+    }
+  }
+}
